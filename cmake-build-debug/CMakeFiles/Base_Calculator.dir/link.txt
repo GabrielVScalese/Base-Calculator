@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Base_Calculator.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\Base_Calculator.dir/objects.a @CMakeFiles\Base_Calculator.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Base_Calculator.dir/objects.a -Wl,--no-whole-archive  -o Base_Calculator.exe -Wl,--out-implib,libBase_Calculator.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Base_Calculator.dir\linklibs.rsp
