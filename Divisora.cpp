@@ -31,57 +31,20 @@ void prepararValores (string *valor1, string *valor2)
         Auxiliadora::getQtdDecimais(*valor2));
 
     if (Auxiliadora::getQtdDecimais(*valor2) > Auxiliadora::getQtdDecimais(*valor1))
-        *valor1 = Auxiliadora::completarParteDecimal(*valor1, Auxiliadora::getQtdDecimais(*valor2) - Auxiliadora::getQtdDecimais(*valor1));
+        *valor1 = Auxiliadora::completarParteDecimal(*valor1, Auxiliadora::getQtdDecimais(*valor2) -
+        Auxiliadora::getQtdDecimais(*valor1));
 
     *valor1 = Auxiliadora::removerCaracter(',', *valor1);
     *valor2 = Auxiliadora::removerCaracter(',', *valor2);
-}
-
-// Metodo que realiza a divisao entre dois valores (metodo secundario)
-string Divisora::dividirValores (string dividendo, string divisor){
-    string quociente;
-    string ret; // Quociente
-
-    // Encontra um dividendo valido para iniciar a divisao
-    string novoDividendo = string(1, dividendo[0]);
-    int i;
-    for (i = 1; Auxiliadora::getMaiorValor(divisor, novoDividendo) == divisor; i++)
-         novoDividendo += dividendo[i];
-
-    for (;;)
-    {
-        quociente = obterQuociente(novoDividendo, divisor);
-        ret.append(quociente);
-        Multiplicadora mul (divisor, quociente, base);
-        string produto = mul.multiplicarValores();
-        Subtradora sub (novoDividendo, produto, base);
-        string resto = sub.subtrairValores();
-
-        // Quando o quociente ja esta pronto para ser retornado
-        if (Auxiliadora::apenasZeros(resto) || Auxiliadora::getQtdDecimais(ret) > numCasasDecimais)
-            break;
-
-        if (i > dividendo.length() - 1) // Nao existe mais digitos disponiveis no dividendo
-        {
-            novoDividendo = resto;
-            if (Auxiliadora::getMaiorValor(divisor, novoDividendo) == divisor) // Novo dividendo e menor que o divisor
-                colocarVirgula(&novoDividendo, &divisor, &ret);
-        }
-        else
-        {
-            novoDividendo = resto + string(1, dividendo[i]); // Pega a proximo digito do dividendo
-            i++;
-        }
-    }
-
-    jaColocouVirgula = 0; // Garantir que a proxima divisao comece com valores iniciais
-    return Auxiliadora::removerCasasDecimais(ret, Auxiliadora::getQtdDecimais(ret) - numCasasDecimais);
 }
 
 // Metodo que obtem o quociente numa divisao
 string Divisora::obterQuociente (string dividendo, string divisor){
     string quociente;
     string digitosPossiveis = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Digitos de todas as bases
+
+    if (Auxiliadora::apenasZeros(dividendo))
+        return "0";
 
     // Testa todos os produtos possiveis na base fornecida
     for (int i = 0; i < base; i++){
@@ -90,10 +53,7 @@ string Divisora::obterQuociente (string dividendo, string divisor){
         dividendo = Auxiliadora::removerZeros(dividendo);
 
         if (Auxiliadora::apenasZeros(produto))
-        {
-            if (!Auxiliadora::apenasZeros(dividendo))
-                quociente = string(1, digitosPossiveis.at(i));
-        }
+            continue;
         else
             if (Auxiliadora::getMaiorValor(produto, dividendo) == dividendo)
                 quociente = string(1, digitosPossiveis.at(i));
@@ -131,41 +91,47 @@ void Divisora::colocarVirgula(string *valor1, string *valor2, string *ret) {
     }
 }
 
-// Metodo que realiza divisao entre dois valores
-string Divisora::dividirValores() {
+// Metodo que realiza a divisao entre dois valores
+string Divisora::dividirValores (){
     string ret;
-    string digitosPossiveis = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    // Prepara o dividendo e o divisor para iniciar a divisao
     prepararValores(&valor1, &valor2);
 
-    // Se o maior produto obtido a partir pelo divisor for menor que o dividendo
-    Multiplicadora mul (valor2, string(1, digitosPossiveis[base - 1]), base);
-    string maiorProduto = mul.multiplicarValores();
-    if (Auxiliadora::getMaiorValor(maiorProduto, valor1) == valor1)
-        return dividirValores(valor1, valor2);
+    // Encontra um dividendo valido para iniciar a divisao
+    string novoDividendo = string(1, valor1[0]);
+    int i;
+    for (i = 1; Auxiliadora::getMaiorValor(valor2, novoDividendo) == valor2; i++)
+         novoDividendo += valor1[i];
 
-    while (Auxiliadora::getQtdDecimais(ret) < numCasasDecimais)
+    for (;;)
     {
-        if (valor1 != valor2)
-            if (Auxiliadora::getMaiorValor(valor1, valor2) == valor2)
-                colocarVirgula(&valor1, &valor2, &ret);
+        if (Auxiliadora::getMaiorValor(valor1, valor2) == valor2)
+            colocarVirgula(&valor1, &valor2, &ret);
 
-        string quociente = obterQuociente(valor1, valor2);
+        string quociente = obterQuociente(novoDividendo, valor2);
         ret.append(quociente);
-
         Multiplicadora mul (valor2, quociente, base);
-        string produto = Auxiliadora::removerZeros(mul.multiplicarValores());
+        string produto = mul.multiplicarValores();
+        Subtradora sub (novoDividendo, produto, base);
+        string resto = sub.subtrairValores();
 
-        Subtradora sub (valor1, produto, base);
-        valor1 = Auxiliadora::removerZeros(sub.subtrairValores());
+        if (Auxiliadora::getQtdDecimais(ret) > numCasasDecimais || Auxiliadora::apenasZeros(resto))
+            break;
 
-        if (Auxiliadora::apenasZeros(valor1)) // Nao ha mais resto
-            return ret;
+        if (i > valor1.length() - 1) // Nao existe mais digitos disponiveis no dividendo
+        {
+            novoDividendo = resto;
+            if (Auxiliadora::getMaiorValor(valor2, novoDividendo) == valor2) // Novo dividendo e menor que o divisor
+                Divisora::colocarVirgula(&novoDividendo, &valor2, &ret);
+        }
+        else
+        {
+            novoDividendo = resto + string(1, valor1[i]); // Pega a proximo digito do dividendo
+            i++;
+        }
     }
 
-    jaColocouVirgula = 0;
-    return Auxiliadora::removerCasasDecimais(ret, Auxiliadora::getQtdDecimais(ret) - numCasasDecimais); // Retorna o quociente de acordo com o numero de casas desejada
+    jaColocouVirgula = 0; // Garantir que a proxima divisao comece com valores iniciais
+    return Auxiliadora::removerCasasDecimais(ret, Auxiliadora::getQtdDecimais(ret) - numCasasDecimais);
 }
-
 

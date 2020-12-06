@@ -14,7 +14,6 @@ private:
     int numCasasDecimais;
     int base;
     string obterQuociente(string, string);
-    string dividirValores(string, string);
     void colocarVirgula (string *, string *, string *);
 public:
     Divisora(string, string, int, int);
