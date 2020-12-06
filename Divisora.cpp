@@ -101,7 +101,10 @@ string Divisora::dividirValores (){
     string novoDividendo = string(1, valor1[0]);
     int i;
     for (i = 1; Auxiliadora::getMaiorValor(valor2, novoDividendo) == valor2; i++)
-         novoDividendo += valor1[i];
+         if (i > valor1.length() - 1)
+             break;
+         else
+            novoDividendo += valor1[i];
 
     for (;;)
     {
