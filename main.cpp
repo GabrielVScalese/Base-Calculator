@@ -10,7 +10,7 @@ using namespace std;
 
 // Main do programa
 int main() {
-    inicio: cout << "\n\n==== [ Calculadora de Bases Numericas ] ====\n";
+    inicio: cout << "==== [ Calculadora de Bases Numericas ] ====\n";
 
     base: cout << "\nDigite a base numerica dos valores: \n";
     int base;
@@ -121,6 +121,8 @@ int main() {
 
     string resposta;
     getline(cin, resposta);
+
+    cout << "\n\n";
 
     if (resposta == "S")
         goto inicio;

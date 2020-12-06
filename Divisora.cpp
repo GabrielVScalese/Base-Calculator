@@ -105,8 +105,9 @@ string Divisora::dividirValores (){
 
     for (;;)
     {
-        if (Auxiliadora::getMaiorValor(valor1, valor2) == valor2)
-            colocarVirgula(&valor1, &valor2, &ret);
+        if (valor1 != valor2)
+            if (Auxiliadora::getMaiorValor(valor1, valor2) == valor2)
+                colocarVirgula(&valor1, &valor2, &ret);
 
         string quociente = obterQuociente(novoDividendo, valor2);
         ret.append(quociente);

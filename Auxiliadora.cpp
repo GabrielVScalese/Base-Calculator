@@ -1,9 +1,10 @@
 #include <sstream>
+#include <cstring>
 #include "Auxiliadora.h"
 
 /* Arquivo de implementacao da classe Auxiliadora */
 
-// Metodo que retorna um valor equivalente a uma letra
+// Metodo que retorna um valor (int) equivalente a uma letra
 int Auxiliadora::getValorEmInteiro (string digito)
 {
     string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -18,7 +19,7 @@ int Auxiliadora::getValorEmInteiro (string digito)
     return alfabeto.find(digito) + 10;
 }
 
-// Metodo que retorna o valor equivalente de uma letra
+// Metodo que retorna o valor (string) equivalente de um inteiro
 string Auxiliadora::getValorEmLetra (int valor)
 {
     string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -62,7 +63,7 @@ string Auxiliadora::completarParteDecimal (string str, int qtd)
     return str;
 }
 
-// Metodo que retorna a quantidade de casas decimais
+// Metodo que retorna a quantidade de casas decimais de um valor
 int Auxiliadora::getQtdDecimais (string valor)
 {
     int index = valor.find(",");
@@ -77,10 +78,10 @@ int Auxiliadora::getQtdDecimais (string valor)
     return ret;
 }
 
-// Metodo que retorna a quantidade valores a direita da virgula
+// Metodo que retorna a quantidade de valores a direita da virgula
 int Auxiliadora::getQtdInteiros (string valor)
 {
-    return valor.length() - getQtdDecimais(valor) - 1;
+   return strlen(valor.c_str()) - getQtdDecimais(valor) - 1;
 }
 
 // Metodo que complementa os valores se for necessario
@@ -97,7 +98,7 @@ void Auxiliadora::prepararValores (string *valor1, string *valor2)
         *valor1 = completarParteDecimal(*valor1, getQtdDecimais(*valor2) - getQtdDecimais(*valor1));
 }
 
-// Metodo que retorna o maior valor entre os valores
+// Metodo que retorna o maior valor entre dois valores
 string Auxiliadora::getMaiorValor(string valor1, string valor2)
 {
     if (valor1.length() > valor2.length())
@@ -146,7 +147,7 @@ string Auxiliadora::getMaiorValor(string valor1, string valor2)
     return valor1;
 }
 
-// Metodo que retorna o menor valor entre os valores
+// Metodo que retorna o menor valor entre dois valores
 string Auxiliadora::getMenorValor(string valor1, string valor2)
 {
     if (getMaiorValor(valor1, valor2) == valor1)
@@ -172,7 +173,7 @@ string Auxiliadora::inserirVirgula(string valor, int posicao) {
     return ret;
 }
 
-// Metodo que remove de uma string um determinado caracter
+// Metodo que remove de uma string um determinado caractere
 string Auxiliadora::removerCaracter(char carac, string valor)
 {
     unsigned int i = 0, j = 0;
