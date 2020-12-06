@@ -122,10 +122,11 @@ int main() {
     string resposta;
     getline(cin, resposta);
 
-    cout << "\n\n";
-
     if (resposta == "S")
+    {
+        cout << "\n\n";
         goto inicio;
+    }
     else
         if (resposta == "N")
             return 0;

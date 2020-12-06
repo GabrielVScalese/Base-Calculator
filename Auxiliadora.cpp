@@ -81,7 +81,7 @@ int Auxiliadora::getQtdDecimais (string valor)
 // Metodo que retorna a quantidade de valores a direita da virgula
 int Auxiliadora::getQtdInteiros (string valor)
 {
-   return strlen(valor.c_str()) - getQtdDecimais(valor) - 1;
+   return valor.length() - getQtdDecimais(valor) - 1;
 }
 
 // Metodo que complementa os valores se for necessario
@@ -193,8 +193,11 @@ string Auxiliadora::removerCaracter(char carac, string valor)
 int Auxiliadora::apenasZeros (string valor)
 {
     for (char i : valor)
-        if (i != '0')
-            return 0;
+        if (i == ',')
+            continue;
+        else
+            if (i != '0')
+                return 0;
 
     return 1;
 }
