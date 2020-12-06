@@ -108,9 +108,9 @@ string Divisora::dividirValores (){
 
     for (;;)
     {
-        if (valor1 != valor2)
-            if (Auxiliadora::getMaiorValor(valor1, valor2) == valor2)
-                colocarVirgula(&valor1, &valor2, &ret);
+        if (novoDividendo != valor2)
+            if (Auxiliadora::getMaiorValor(novoDividendo, valor2) == valor2)
+                colocarVirgula(&novoDividendo, &valor2, &ret);
 
         string quociente = obterQuociente(novoDividendo, valor2);
         ret.append(quociente);
@@ -136,6 +136,9 @@ string Divisora::dividirValores (){
     }
 
     jaColocouVirgula = 0; // Garantir que a proxima divisao comece com valores iniciais
-    return Auxiliadora::removerCasasDecimais(ret, Auxiliadora::getQtdDecimais(ret) - numCasasDecimais);
+    if (Auxiliadora::getQtdDecimais(ret) - numCasasDecimais > 0)
+        return Auxiliadora::removerCasasDecimais(ret, Auxiliadora::getQtdDecimais(ret) - numCasasDecimais);
+    else
+        return ret;
 }
 
