@@ -124,7 +124,7 @@ int main() {
 
     if (resposta == "S")
     {
-        cout << "\n\n";
+        system("cls");
         goto inicio;
     }
     else
