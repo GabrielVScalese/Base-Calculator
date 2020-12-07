@@ -29,12 +29,10 @@ void inserirNoFim (string valor)
 
 // Metodo que realiza uma multiplicacao entre dois digitos
 string Multiplicadora::multiplicarDoisDigitos(string digito1, string digito2, string passaUm) {
-    int valor1;
-    int valor2;
     int adicional = 1;
 
-    valor1 = Auxiliadora::converterDigitoEmInteiro(digito1);
-    valor2 = Auxiliadora::converterDigitoEmInteiro(digito2);
+    int valor1 = Auxiliadora::converterDigitoEmInteiro(digito1);
+    int valor2 = Auxiliadora::converterDigitoEmInteiro(digito2);
 
     if (!passaUm.empty()) // Existe um "passaUm"
     {
@@ -52,7 +50,7 @@ string Multiplicadora::somarValoresObtidos()
     string ret = valoresObtidos[0];
     for (int i = 0; i < valoresObtidos->length() - 1; i++)
     {
-        if (valoresObtidos[i + 1] == ",")
+        if (valoresObtidos[i + 1] == "")
             break;
 
         Somadora som (ret, valoresObtidos[i + 1], base);
