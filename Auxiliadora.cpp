@@ -1,5 +1,4 @@
 #include <sstream>
-#include <cstring>
 #include "Auxiliadora.h"
 
 /* Arquivo de implementacao da classe Auxiliadora */
@@ -110,27 +109,11 @@ string Auxiliadora::getMaiorValor(string valor1, string valor2)
         {
             for (int i = 0; i < valor1.length(); i++)
             {
-                int digitoValor1;
-                int digitoValor2;
-
                 if (string(1, valor1[i]) == ",")
                     continue;
 
-                if (isalpha(valor1[i]))
-                    digitoValor1 = getValorEmInteiro(string(1, valor1[i]));
-                else
-                {
-                    stringstream st1 (string(1, valor1[i]));
-                    st1 >> digitoValor1;
-                }
-
-                if (isalpha(valor2[i]))
-                    digitoValor2 = getValorEmInteiro(string(1, valor2[i]));
-                else
-                {
-                    stringstream st2 (string(1, valor2[i]));
-                    st2 >> digitoValor2;
-                }
+                int digitoValor1 = converterDigitoEmInteiro(string(1, valor1[i]));
+                int digitoValor2 = converterDigitoEmInteiro(string(1, valor2[i]));
 
                 if (digitoValor1 == digitoValor2)
                     continue;
