@@ -41,9 +41,7 @@ int Subtradora::emprestarUm (int valor1) // Tem falha
     }
     else
     {
-        stringstream st (string(1, maiorValor[indiceAtual]));
-        int digitoEmprestimo; // Digito que realiza o emprestimo
-        st >> digitoEmprestimo; // Guarda-se o valor do digito que realiza o emprestimo
+        int digitoEmprestimo = Auxiliadora::converterDigitoEmInteiro(string(1, maiorValor[indiceAtual]));
         maiorValor[indiceAtual] = *std::to_string(digitoEmprestimo - 1).c_str(); // Subtrai 1 do digito
     }
 
@@ -53,12 +51,8 @@ int Subtradora::emprestarUm (int valor1) // Tem falha
         if (maiorValor[i] == ',')
             continue;
 
-        stringstream st(string(1, maiorValor[i]));
-        int digito;
-        st >> digito;
-
+        int digito = Auxiliadora::converterDigitoEmInteiro(string(1, maiorValor[i]));
         long double valorProvisorioDigito = Conversor::outraParaDez(to_string(digito + 10), base);
-
         maiorValor[i] = *Conversor::dezParaOutra(valorProvisorioDigito - 1, base).c_str(); // Subtrai, pois esta passando o emprestimo
     }
 

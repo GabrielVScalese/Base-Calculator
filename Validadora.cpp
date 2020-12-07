@@ -1,6 +1,5 @@
 #include "Validadora.h"
 #include "Auxiliadora.h"
-#include <sstream>
 
 /* Arquivo de implementacao da classe Validadora */
 
@@ -16,14 +15,7 @@ int Validadora::existsInBase(string valor, int base) {
         if (c == ',')
             continue;
 
-        int valorChar;
-        if (isalpha(c))
-            valorChar = Auxiliadora::getValorEmInteiro(string(1, c));
-        else
-        {
-            stringstream st (string(1, c));
-            st >> valorChar;
-        }
+        int valorChar = Auxiliadora::converterDigitoEmInteiro(string(1, c));
 
         if (valorChar >= base)
             return 0;

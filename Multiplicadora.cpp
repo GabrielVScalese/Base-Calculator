@@ -50,7 +50,7 @@ string Multiplicadora::somarValoresObtidos()
     string ret = valoresObtidos[0];
     for (int i = 0; i < valoresObtidos->length() - 1; i++)
     {
-        if (valoresObtidos[i + 1] == "")
+        if (valoresObtidos[i + 1].empty())
             break;
 
         Somadora som (ret, valoresObtidos[i + 1], base);
@@ -110,7 +110,6 @@ string Multiplicadora::multiplicarValores(){
     }
 
     string resultadoFinal = somarValoresObtidos();
-
     valoresObtidos->erase();
     cont = 0;
     return resultadoFinal;

@@ -17,12 +17,10 @@ Somadora::Somadora(string valor1, string valor2, int base) {
 
 // Metodo que soma dos digitos
 string Somadora::somarDoisDigitos (string digito1, string digito2, string passaUm, int base) {
-    int valor1;
-    int valor2;
     int adicional = 0;
 
-    valor1 = Auxiliadora::converterDigitoEmInteiro(digito1);
-    valor2 = Auxiliadora::converterDigitoEmInteiro(digito2);
+    int valor1 = Auxiliadora::converterDigitoEmInteiro(digito1);
+    int valor2 = Auxiliadora::converterDigitoEmInteiro(digito2);
     
     if (!passaUm.empty()) // Existe um "passa um"
     {
