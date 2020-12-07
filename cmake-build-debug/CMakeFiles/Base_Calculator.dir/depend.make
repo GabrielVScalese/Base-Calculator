@@ -34,6 +34,7 @@ CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj: ../Auxiliadora.h
 CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj: ../Validadora.cpp
 CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj: ../Validadora.h
 
+CMakeFiles/Base_Calculator.dir/main.cpp.obj: ../Auxiliadora.h
 CMakeFiles/Base_Calculator.dir/main.cpp.obj: ../Divisora.h
 CMakeFiles/Base_Calculator.dir/main.cpp.obj: ../Multiplicadora.h
 CMakeFiles/Base_Calculator.dir/main.cpp.obj: ../Somadora.h

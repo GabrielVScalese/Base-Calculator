@@ -4,6 +4,7 @@
 #include "Multiplicadora.h"
 #include "Divisora.h"
 #include "Validadora.h"
+#include "Auxiliadora.h"
 #include <string>
 
 using namespace std;
@@ -54,16 +55,16 @@ int main() {
         goto operacao;
     }
 
+    if (valor1.find(',') == -1)
+        valor1.append(",0");
+
+    if (valor2.find(',') == -1)
+        valor2.append(",0");
+
     string result;
     switch (*operacao.c_str()) {
         case '+' :
         {
-            if (valor1.find(',') == -1) // Nao foi possivel fazer metodo
-                valor1.append(",0");
-
-            if (valor2.find(',') == -1)
-                valor2.append(",0");
-
             Somadora som (valor1, valor2, base);
             result = som.somarValores();
             break;
@@ -71,12 +72,6 @@ int main() {
 
         case '-':
         {
-            if (valor1.find(',') == -1) // Nao foi possivel fazer metodo
-                valor1.append(",0");
-
-            if (valor2.find(',') == -1)
-                valor2.append(",0");
-
             Subtradora sub (valor1, valor2, base);
             result = sub.subtrairValores();
             break;
@@ -84,12 +79,6 @@ int main() {
 
         case '*':
         {
-            if (valor1.find(',') == -1) // Nao foi possivel fazer metodo
-                valor1.append(",0");
-
-            if (valor2.find(',') == -1)
-                valor2.append(",0");
-
             Multiplicadora mul (valor1, valor2, base);
             result = mul.multiplicarValores();
             break;
@@ -97,17 +86,17 @@ int main() {
 
         case '/':
         {
+            if (Auxiliadora::apenasZeros(valor2))
+            {
+                cout << "\nDivisor nao pode ser zero\n";
+                goto segundoValor;
+            }
+
             int numCasasDecimais;
             cout << "\nDigite o numero de casas decimais: \n";
             cin >> numCasasDecimais;
 
             std::cin.ignore();
-
-            if (valor1.find(',') == -1) // Nao foi possivel fazer metodo
-                valor1.append(",0");
-
-            if (valor2.find(',') == -1)
-                valor2.append(",0");
 
             Divisora div (valor1, valor2, base, numCasasDecimais);
             result = div.dividirValores();
