@@ -88,7 +88,7 @@ int main() {
         {
             if (Auxiliadora::apenasZeros(valor2))
             {
-                cout << "\nDivisor nao pode ser zero\n";
+                cout << "\nDivisor nao pode ser zero!\n";
                 goto segundoValor;
             }
 
