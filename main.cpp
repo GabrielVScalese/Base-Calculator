@@ -5,6 +5,7 @@
 #include "Divisora.h"
 #include "Validadora.h"
 #include "Auxiliadora.h"
+#include "Conversor.h"
 #include <string>
 
 using namespace std;
@@ -60,27 +61,41 @@ int main() {
 
     if (valor2.find(',') == -1)
         valor2.append(",0");
+    
+    long double valor1BaseDez;
+    long double valor2BaseDez;
+
+    valor1BaseDez = Conversor::outraParaDez(valor1, base);
+    valor2BaseDez = Conversor::outraParaDez(valor2, base);
 
     string result;
     switch (*operacao.c_str()) {
         case '+' :
         {
             Somadora som (valor1, valor2, base);
-            result = som.somarValores();
+            if(valor1BaseDez + valor2BaseDez < 0)
+              result = '-';
+           
+            result += som.somarValores();
             break;
         }
 
         case '-':
         {
             Subtradora sub (valor1, valor2, base);
-            result = sub.subtrairValores();
+            if(valor1BaseDez - valor2BaseDez < 0)
+              result = '-';
+            result += sub.subtrairValores();
             break;
         }
 
         case '*':
         {
             Multiplicadora mul (valor1, valor2, base);
-            result = mul.multiplicarValores();
+            if(valor1BaseDez < 0 || valor2BaseDez < 0)
+              if(!(valor1BaseDez < 0 && valor2BaseDez < 0))
+                  result = '-';
+            result += mul.multiplicarValores();
             break;
         }
 
@@ -99,7 +114,12 @@ int main() {
             std::cin.ignore();
 
             Divisora div (valor1, valor2, base, numCasasDecimais);
-            result = div.dividirValores();
+
+            if(valor1BaseDez < 0 || valor2BaseDez < 0)
+              if(!(valor1BaseDez < 0 && valor2BaseDez < 0))
+                  result = '-';
+
+            result += div.dividirValores();
             break;
         }
     }
