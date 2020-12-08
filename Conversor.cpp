@@ -31,6 +31,10 @@ long double Conversor::outraParaDez(string valor, int baseValor)
 {
     long double result = 0;
     unsigned int cont = 0;
+    bool negativo = false;
+
+    if(valor.find('-') == 0)
+      negativo = true;
 
     for (int i = valor.length() - 1; i >= 0 ; i--)
     {
@@ -39,6 +43,9 @@ long double Conversor::outraParaDez(string valor, int baseValor)
         result += digito * potencia;
         cont++;
     }
+    
+     if(negativo)
+      result = -result;
 
     return result;
 }
