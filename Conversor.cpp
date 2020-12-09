@@ -6,20 +6,20 @@
 /* Arquivo de implementacao da classe Conversor */
 
 // Metodo que converte um valor na base dez para outra base
-string Conversor::dezParaOutra (long double valor, int base) {
+string Conversor::dezParaOutra (long double valor, int baseValor) {
     string ret;
     int quociente = (int) valor;
 
     do
     {
-        int resto = quociente % base;
+        int resto = quociente % baseValor;
 
         if (resto >= 10)
             ret.insert(0, Auxiliadora::getValorEmLetra(resto));
         else
             ret.insert(0, std::to_string(resto));
 
-        quociente = quociente / base;
+        quociente = quociente / baseValor;
     }
     while (quociente != 0);
 
