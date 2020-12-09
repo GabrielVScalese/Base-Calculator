@@ -181,7 +181,6 @@ int main() {
     if (resposta == "S")
     {
         system("cls");
-        //cout << "\n\n";
         goto inicio;
     }
     else
