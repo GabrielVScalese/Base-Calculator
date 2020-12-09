@@ -15,10 +15,10 @@ private:
     string somarDoisDigitos(string, string, string, int);
 public:
     Somadora(string, string, int);
-    string somarValores();
     void setValor1 (string);
     void setValor2 (string);
     void setBase (int);
+    string somarValores();
 };
 
 #endif

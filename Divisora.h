@@ -17,13 +17,13 @@ private:
     void colocarVirgula (string *, string *, string *);
 public:
     Divisora(string, string, int, int);
-    string dividirValores();
     void setValor1 (string);
     void setValor2 (string);
     void setBase (int);
     void setNumCasasDecimais (int);
     bool operator!= (Divisora);
     bool operator== (Divisora);
+    string dividirValores();
 };
 
 #endif

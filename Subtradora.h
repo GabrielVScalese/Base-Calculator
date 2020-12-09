@@ -12,14 +12,14 @@ private:
     string valor1;
     string valor2;
     int base;
-    int emprestarUm (int);
     string subtrairDoisDigitos(string digito1, string digito2);
+    int emprestarUm (int);
 public:
     Subtradora(string, string, int);
-    string subtrairValores();
     void setValor1 (string);
     void setValor2 (string);
     void setBase (int);
+    string subtrairValores();
 };
 
 #endif
