@@ -142,8 +142,14 @@ int main() {
             }
 
             int numCasasDecimais;
-            cout << "\nDigite o numero de casas decimais: \n";
+            numCasasDecimais: cout << "\nDigite o numero de casas decimais: \n";
             cin >> numCasasDecimais;
+
+            if (numCasasDecimais <= 0)
+            {
+                cout << "\nNumero de casas decimais invalido!\n";
+                goto numCasasDecimais;
+            }
 
             std::cin.ignore();
 

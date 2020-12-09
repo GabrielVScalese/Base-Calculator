@@ -3,6 +3,7 @@
 #include "Auxiliadora.h"
 #include "Somadora.h"
 #include "Conversor.h"
+#include "Validadora.h"
 
 /* Implementacao da classe Multiplicadora */
 
@@ -16,8 +17,32 @@ int cont = 0;
 // Construtor da classe
 Multiplicadora::Multiplicadora(string valor1, string valor2, int base)
 {
+    setValor1(valor1);
+    setValor2(valor2);
+    setBase(base);
+}
+
+void Multiplicadora::setValor1(string valor1)
+{
+    if (valor1.empty())
+        throw "Valor invalido";
+
     Multiplicadora::valor1 = valor1;
+}
+
+void Multiplicadora::setValor2(string valor2)
+{
+    if (valor2.empty())
+        throw "Valor invalido";
+
     Multiplicadora::valor2 = valor2;
+}
+
+void Multiplicadora::setBase(int base)
+{
+    if (!Validadora::existsBase(base))
+        throw "Base invalida";
+
     Multiplicadora::base = base;
 }
 

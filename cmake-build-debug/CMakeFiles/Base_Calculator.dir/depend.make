@@ -13,22 +13,26 @@ CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj: ../Divisora.cpp
 CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj: ../Divisora.h
 CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj: ../Multiplicadora.h
 CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj: ../Subtradora.h
+CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj: ../Validadora.h
 
 CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj: ../Auxiliadora.h
 CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj: ../Conversor.h
 CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj: ../Multiplicadora.cpp
 CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj: ../Multiplicadora.h
 CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj: ../Somadora.h
+CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj: ../Validadora.h
 
 CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj: ../Auxiliadora.h
 CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj: ../Conversor.h
 CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj: ../Somadora.cpp
 CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj: ../Somadora.h
+CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj: ../Validadora.h
 
 CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj: ../Auxiliadora.h
 CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj: ../Conversor.h
 CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj: ../Subtradora.cpp
 CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj: ../Subtradora.h
+CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj: ../Validadora.h
 
 CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj: ../Auxiliadora.h
 CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj: ../Validadora.cpp

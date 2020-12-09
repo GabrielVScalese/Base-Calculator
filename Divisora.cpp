@@ -2,6 +2,7 @@
 #include "Auxiliadora.h"
 #include "Multiplicadora.h"
 #include "Subtradora.h"
+#include "Validadora.h"
 #include <string>
 
 /* Arquivo de implementacao da classe Divisora */
@@ -13,14 +14,70 @@ int jaColocouVirgula = 0;
 // Construtor da classe
 Divisora::Divisora(string valor1, string valor2, int base, int numCasasDecimais)
 {
-    Divisora::valor1 = valor1;
-    Divisora::valor2 = valor2;
-    Divisora::base = base;
+    setValor1(valor1);
+    setValor2(valor2);
+    setBase(base);
+    setNumCasasDecimais(numCasasDecimais); // Arrumar na main
+}
 
+void Divisora::setValor1(string valor1)
+{
+    if (valor1.empty())
+        throw "Valor invalido";
+
+    Divisora::valor1 = valor1;
+}
+
+void Divisora::setValor2(string valor2)
+{
+    if (valor2.empty())
+        throw "Valor invalido";
+
+    Divisora::valor2 = valor2;
+}
+
+void Divisora::setBase(int base)
+{
+    if (!Validadora::existsBase(base))
+        throw "Base invalida";
+
+    Divisora::base = base;
+}
+
+void Divisora::setNumCasasDecimais(int numCasasDecimais)
+{
     if (numCasasDecimais <= 0)
-        Divisora::numCasasDecimais = 1;
-    else
-        Divisora::numCasasDecimais = numCasasDecimais;
+        throw "Numero de casas decimais invalioa";
+
+    Divisora::numCasasDecimais = numCasasDecimais;
+}
+
+bool Divisora::operator== (Divisora div)
+{
+    if (this->valor1 != div.valor1)
+        return false;
+
+    if (this->valor2 != div.valor2)
+        return false;
+
+    if (this->base != div.base)
+        return false;
+
+    return true;
+}
+
+bool Divisora::operator!= (Divisora div)
+{
+    if (this->valor1 == div.valor1)
+        return false;
+
+    if (this->valor2 == div.valor2)
+        return false;
+
+    if (this->base == div.base)
+        return false;
+
+    return true;
 }
 
 // Metodo que prepara os valores para comecar a divisao

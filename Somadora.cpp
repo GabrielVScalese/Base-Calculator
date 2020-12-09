@@ -3,6 +3,7 @@
 #include "Auxiliadora.h"
 #include <string>
 #include <sstream>
+#include "Validadora.h"
 
 /* Arquivo de implementacao da classe Somadora */
 
@@ -10,8 +11,32 @@ using namespace std;
 
 // Construtor da classe Somadora
 Somadora::Somadora(string valor1, string valor2, int base) {
+    setValor1(valor1);
+    setValor2(valor2);
+    setBase(base);
+}
+
+void Somadora::setValor1(string valor1)
+{
+    if (valor1.empty())
+        throw "Valor invalido";
+
     Somadora::valor1 = valor1;
+}
+
+void Somadora::setValor2(string valor2)
+{
+    if (valor2.empty())
+        throw "Valor invalido";
+
     Somadora::valor2 = valor2;
+}
+
+void Somadora::setBase(int base)
+{
+    if (!Validadora::existsBase(base))
+        throw "Base invalida";
+
     Somadora::base = base;
 }
 

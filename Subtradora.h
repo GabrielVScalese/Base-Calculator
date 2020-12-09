@@ -17,6 +17,9 @@ private:
 public:
     Subtradora(string, string, int);
     string subtrairValores();
+    void setValor1 (string);
+    void setValor2 (string);
+    void setBase (int);
 };
 
 #endif

@@ -2,6 +2,7 @@
 #include "Subtradora.h"
 #include "Auxiliadora.h"
 #include "Conversor.h"
+#include "Validadora.h"
 
 /* Arquivo de implementacao da classe Subtradora */
 
@@ -13,8 +14,32 @@ string maiorValor;
 // Construtor da classe Subtradora
 Subtradora::Subtradora(string valor1, string valor2, int base)
 {
+    setValor1(valor1);
+    setValor2(valor2);
+    setBase(base);
+}
+
+void Subtradora::setValor1(string valor1)
+{
+    if (valor1.empty())
+        throw "Valor invalido";
+
     Subtradora::valor1 = valor1;
+}
+
+void Subtradora::setValor2(string valor2)
+{
+    if (valor2.empty())
+        throw "Valor invalido";
+
     Subtradora::valor2 = valor2;
+}
+
+void Subtradora::setBase(int base)
+{
+    if (!Validadora::existsBase(base))
+        throw "Base invalida";
+
     Subtradora::base = base;
 }
 

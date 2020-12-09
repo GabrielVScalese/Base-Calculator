@@ -17,6 +17,9 @@ private:
 public:
     Multiplicadora(string, string, int);
     string multiplicarValores();
+    void setValor1 (string);
+    void setValor2 (string);
+    void setBase (int);
 };
 
 #endif
