@@ -98,7 +98,7 @@ int main() {
             if(valor1BaseDez - valor2BaseDez < 0)
               result = '-';
 
-            if(!(valor1.find('-') == 0) && valor2.find('-') == 0)
+            if(valor1.find('-') != 0 && valor2.find('-') == 0)
             {
               Somadora som (valor1, valor2, base);
               result += som.somarValores();
@@ -128,6 +128,7 @@ int main() {
             if(valor1BaseDez < 0 || valor2BaseDez < 0)
               if(!(valor1BaseDez < 0 && valor2BaseDez < 0))
                   result = '-';
+
             result += mul.multiplicarValores();
             break;
         }
@@ -146,12 +147,25 @@ int main() {
 
             std::cin.ignore();
 
-            Divisora div (valor1, valor2, base, numCasasDecimais);
-
+            string copyValor1 = valor1;
+            string copyValor2 = valor2;
             if(valor1BaseDez < 0 || valor2BaseDez < 0)
               if(!(valor1BaseDez < 0 && valor2BaseDez < 0))
-                  result = '-';
+              {
+                  if (valor1BaseDez < 0)
+                      copyValor1 = Auxiliadora::removerCaracter('-', valor1);
+                  else
+                      copyValor2 = Auxiliadora::removerCaracter('-', valor2);
 
+                  result = '-';
+              }
+              else
+              {
+                  copyValor1 = Auxiliadora::removerCaracter('-', valor1);
+                  copyValor2 = Auxiliadora::removerCaracter('-', valor2);
+              }
+
+            Divisora div (copyValor1, copyValor2, base, numCasasDecimais);
             result += div.dividirValores();
             break;
         }
@@ -166,8 +180,8 @@ int main() {
 
     if (resposta == "S")
     {
-        //system("cls");
-        cout << "\n\n";
+        system("cls");
+        //cout << "\n\n";
         goto inicio;
     }
     else

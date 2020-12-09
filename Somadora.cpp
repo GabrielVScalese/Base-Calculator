@@ -65,7 +65,7 @@ string Somadora::somarValores() {
         }
     }
 
-    return ret;
+    return Auxiliadora::removerZeros(ret);
 }
 
 
