@@ -72,20 +72,53 @@ int main() {
     switch (*operacao.c_str()) {
         case '+' :
         {
-            Somadora som (valor1, valor2, base);
             if(valor1BaseDez + valor2BaseDez < 0)
               result = '-';
-           
-            result += som.somarValores();
+
+            if(!(valor1.find('-') == 0) && valor2.find('-') == 0)
+            {
+              Subtradora sub (valor1, valor2, base);
+              result += sub.subtrairValores();
+            }
+            else if(valor1.find('-') == 0 && !(valor2.find('-') == 0))
+            {
+              Subtradora sub (valor2, valor1, base);
+              result += sub.subtrairValores();
+            }
+            else
+            {
+              Somadora som (valor1, valor2, base);
+              result += som.somarValores();
+            }
             break;
         }
 
         case '-':
         {
-            Subtradora sub (valor1, valor2, base);
             if(valor1BaseDez - valor2BaseDez < 0)
               result = '-';
-            result += sub.subtrairValores();
+
+            if(!(valor1.find('-') == 0) && valor2.find('-') == 0)
+            {
+              Somadora som (valor1, valor2, base);
+              result += som.somarValores();
+            }
+            else if(valor1.find('-') == 0 && !(valor2.find('-') == 0))
+            {
+              Somadora som (valor2, valor1, base);
+              result += som.somarValores();
+            }
+            else if(valor1.find('-') == 0 && valor2.find('-') == 0)
+            {
+              Subtradora sub (valor2, valor1, base);
+              result += sub.subtrairValores();
+            }
+            else
+            {
+              Subtradora sub (valor1, valor2, base);
+              result += sub.subtrairValores();
+            }
+
             break;
         }
 
