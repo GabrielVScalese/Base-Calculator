@@ -115,7 +115,7 @@ string Multiplicadora::somarValoresObtidos()
         if (valoresObtidos[i + 1].empty())
             break;
 
-        Somadora som (ret, valoresObtidos[i + 1], base);
+        Somadora som (ret, valoresObtidos[i + 1], base); // Soma de cada valor obtido durante a multiplicacao
         ret = som.somarValores();
     }
 
@@ -146,7 +146,7 @@ string Multiplicadora::multiplicarValores()
             string produtoDeDoisDigitos = multiplicarDoisDigitos(string(1, menorValor[i]),
                                                                  string(1, maiorValor[j]), passaUm);
 
-            if (produtoDeDoisDigitos.length() > 1)
+            if (produtoDeDoisDigitos.length() > 1) // Existe um "passaUm"
             {
                 passaUm = produtoDeDoisDigitos.substr(0, produtoDeDoisDigitos.length() - 1);
                 ret.insert(0, produtoDeDoisDigitos.substr(produtoDeDoisDigitos.length() - 1, 1));

@@ -90,10 +90,7 @@ string Somadora::somarDoisDigitos (string digito1, string digito2, string passaU
     int valor2 = Auxiliadora::converterDigitoEmInteiro(digito2);
     
     if (!passaUm.empty()) // Existe um "passa um"
-    {
-        stringstream st (passaUm);
-        st >> adicional;
-    }
+        adicional = Auxiliadora::converterDigitoEmInteiro(passaUm);
     
     return Conversor::dezParaOutra(valor1 + valor2 + adicional, base);
 }
@@ -133,7 +130,7 @@ string Somadora::somarValores()
         }
     }
 
-    return Auxiliadora::removerZerosAntesVirgula(ret);
+    return Auxiliadora::removerZerosAntesVirgula(ret); // Retira impurezas antes de retornar
 }
 
 
