@@ -10,6 +10,7 @@
 
 using namespace std;
 
+// Variavel booleana que indica se ja houve insercao de virgula no quociente parcial
 int jaColocouVirgula = 0;
 
 // Construtor da classe
@@ -110,7 +111,8 @@ void prepararValores (string *valor1, string *valor2)
 }
 
 // Metodo que obtem o quociente numa divisao
-string Divisora::obterQuociente (string dividendo, string divisor){
+string Divisora::obterQuociente (string dividendo, string divisor)
+{
     string quociente;
     string digitosPossiveis = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Digitos de todas as bases
 
@@ -136,7 +138,8 @@ string Divisora::obterQuociente (string dividendo, string divisor){
 }
 
 // Metodo que coloca virgula para introduzir valores decimais no resultado parcial
-void Divisora::colocarVirgula(string *valor1, string *valor2, string *ret) {
+void Divisora::colocarVirgula(string *valor1, string *valor2, string *ret)
+{
     int primeiraVez = 1;
 
     while (Auxiliadora::getMaiorValor(*valor1, *valor2) == *valor2)
@@ -163,7 +166,8 @@ void Divisora::colocarVirgula(string *valor1, string *valor2, string *ret) {
 }
 
 // Metodo que realiza a divisao entre dois valores
-string Divisora::dividirValores (){
+string Divisora::dividirValores ()
+{
     string ret;
 
     prepararValores(&valor1, &valor2);

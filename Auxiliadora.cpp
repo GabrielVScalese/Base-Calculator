@@ -27,7 +27,8 @@ string Auxiliadora::getValorEmLetra (int valor)
 }
 
 // Metodo que converte um digito (string) para um valor inteiro
-int Auxiliadora::converterDigitoEmInteiro(string digito) {
+int Auxiliadora::converterDigitoEmInteiro(string digito)
+{
     int ret;
 
     if (getValorEmInteiro(digito) != -1)
@@ -140,7 +141,8 @@ string Auxiliadora::getMenorValor(string valor1, string valor2)
 }
 
 // Metodo que insere virgula em uma determinada posicao
-string Auxiliadora::inserirVirgula(string valor, int posicao) {
+string Auxiliadora::inserirVirgula(string valor, int posicao)
+{
     string ret;
 
     int j = 0;
@@ -186,7 +188,8 @@ int Auxiliadora::apenasZeros (string valor)
 }
 
 // Metodo que remove zeros a esquerda da virgula
-string Auxiliadora::removerZerosAntesVirgula (string valor) {
+string Auxiliadora::removerZerosAntesVirgula (string valor)
+{
     if (apenasZeros(valor))
         return valor;
 

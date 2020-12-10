@@ -10,7 +10,8 @@
 using namespace std;
 
 // Construtor da classe Somadora
-Somadora::Somadora(string valor1, string valor2, int base) {
+Somadora::Somadora(string valor1, string valor2, int base)
+{
     setValor1(valor1);
     setValor2(valor2);
     setBase(base);
@@ -81,7 +82,8 @@ ostream &operator<< (ostream &os, Somadora &div)
 }
 
 // Metodo que soma dois digitos
-string Somadora::somarDoisDigitos (string digito1, string digito2, string passaUm, int base) {
+string Somadora::somarDoisDigitos (string digito1, string digito2, string passaUm, int base)
+{
     int adicional = 0;
 
     int valor1 = Auxiliadora::converterDigitoEmInteiro(digito1);
@@ -97,7 +99,8 @@ string Somadora::somarDoisDigitos (string digito1, string digito2, string passaU
 }
 
 // Metodo que soma dois valores
-string Somadora::somarValores() {
+string Somadora::somarValores()
+{
     string ret = "";
     string passaUm = "";
 

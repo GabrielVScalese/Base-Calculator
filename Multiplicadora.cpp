@@ -10,9 +10,9 @@
 
 using namespace std;
 
-// Atributo que representa um vetor de valores obtidos durante uma multiplicacao
+// Variavel que representa um vetor de valores obtidos durante uma multiplicacao
 string valoresObtidos [1000];
-// Atributo que representa que indica o indice atual do vetor de valores obtidos
+// Variavel que representa que indica o indice atual do vetor de valores obtidos
 int cont = 0;
 
 // Construtor da classe
@@ -94,7 +94,8 @@ void inserirNoFim (string valor)
 }
 
 // Metodo que realiza uma multiplicacao entre dois digitos
-string Multiplicadora::multiplicarDoisDigitos(string digito1, string digito2, string passaUm) {
+string Multiplicadora::multiplicarDoisDigitos(string digito1, string digito2, string passaUm)
+{
     int valor1 = Auxiliadora::converterDigitoEmInteiro(digito1);
     int valor2 = Auxiliadora::converterDigitoEmInteiro(digito2);
     int adicional = 0;
@@ -125,7 +126,8 @@ string Multiplicadora::somarValoresObtidos()
 }
 
 // Metodo que realiza a multiplicacao entre dois valores
-string Multiplicadora::multiplicarValores(){
+string Multiplicadora::multiplicarValores()
+{
     string ret;
     string passaUm;
 

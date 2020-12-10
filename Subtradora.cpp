@@ -6,9 +6,9 @@
 
 /* Arquivo de implementacao da classe Subtradora */
 
-// Atributo que representa o indice atual numa busca de digito para emprestimo
+// Variavel que representa o indice atual numa busca de digito para emprestimo
 int indiceAtual = 0;
-// Atributo que representa o maior valor entre dois valores
+// Variavel que representa o maior valor entre dois valores
 string maiorValor;
 
 // Construtor da classe Subtradora
@@ -133,7 +133,8 @@ int Subtradora::emprestarUm (int valor1) // Tem falha
 }
 
 // Metodo que subtrai dois digitos
-string Subtradora::subtrairDoisDigitos (string digito1, string digito2) {
+string Subtradora::subtrairDoisDigitos (string digito1, string digito2)
+{
     int valor1 = Auxiliadora::converterDigitoEmInteiro(digito1);
     int valor2 = Auxiliadora::converterDigitoEmInteiro(digito2);
 
@@ -144,7 +145,8 @@ string Subtradora::subtrairDoisDigitos (string digito1, string digito2) {
 }
 
 // Metodo que subtrai dois valores
-string Subtradora::subtrairValores () {
+string Subtradora::subtrairValores ()
+{
     string ret = "";
 
     Auxiliadora::prepararValores(&valor1, &valor2);
