@@ -331,32 +331,32 @@ Validadora.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Base_Calculator.dir\build.make CMakeFiles/Base_Calculator.dir/Validadora.cpp.s
 .PHONY : Validadora.cpp.s
 
-testes.obj: testes.cpp.obj
+main.obj: main.cpp.obj
 
-.PHONY : testes.obj
+.PHONY : main.obj
 
 # target to build an object file
-testes.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Base_Calculator.dir\build.make CMakeFiles/Base_Calculator.dir/testes.cpp.obj
-.PHONY : testes.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Base_Calculator.dir\build.make CMakeFiles/Base_Calculator.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-testes.i: testes.cpp.i
+main.i: main.cpp.i
 
-.PHONY : testes.i
+.PHONY : main.i
 
 # target to preprocess a source file
-testes.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Base_Calculator.dir\build.make CMakeFiles/Base_Calculator.dir/testes.cpp.i
-.PHONY : testes.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Base_Calculator.dir\build.make CMakeFiles/Base_Calculator.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-testes.s: testes.cpp.s
+main.s: main.cpp.s
 
-.PHONY : testes.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-testes.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Base_Calculator.dir\build.make CMakeFiles/Base_Calculator.dir/testes.cpp.s
-.PHONY : testes.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Base_Calculator.dir\build.make CMakeFiles/Base_Calculator.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -388,9 +388,9 @@ help:
 	@echo ... Validadora.obj
 	@echo ... Validadora.i
 	@echo ... Validadora.s
-	@echo ... testes.obj
-	@echo ... testes.i
-	@echo ... testes.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

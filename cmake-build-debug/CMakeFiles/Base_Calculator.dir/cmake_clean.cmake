@@ -9,7 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj"
   "CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj"
   "CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj"
-  "CMakeFiles/Base_Calculator.dir/testes.cpp.obj"
+  "CMakeFiles/Base_Calculator.dir/main.cpp.obj"
   "libBase_Calculator.dll.a"
 )
 

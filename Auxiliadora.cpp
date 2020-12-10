@@ -191,7 +191,10 @@ string Auxiliadora::removerZeros (string valor) {
         return valor;
 
     while (valor.at(0) == '0')
-           valor.erase(0, 1);
+           if (valor.at(1) == ',')
+               break;
+           else
+               valor.erase(0, 1);
 
     return valor;
 }
