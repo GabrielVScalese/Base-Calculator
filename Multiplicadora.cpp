@@ -4,6 +4,7 @@
 #include "Somadora.h"
 #include "Conversor.h"
 #include "Validadora.h"
+#include <iostream>
 
 /* Implementacao da classe Multiplicadora */
 
@@ -44,6 +45,39 @@ void Multiplicadora::setBase(int base)
         throw "Base invalida";
 
     Multiplicadora::base = base;
+}
+
+bool Multiplicadora::operator== (Multiplicadora mul)
+{
+    if (this->operator!=(mul))
+        return false;
+    else
+        return true;
+}
+
+bool Multiplicadora::operator!= (Multiplicadora mul)
+{
+    if (this->valor1 != mul.valor1)
+        return true;
+
+    if (this->valor2 != mul.valor2)
+        return true;
+
+    if (this->base != mul.base)
+        return true;
+
+    return false;
+}
+
+void Multiplicadora::print(ostream *os)
+{
+    *os << "Valor1: "  << valor1 << " | Valor2: " << valor2 << " | Base: " << base;
+}
+
+ostream &operator<< (ostream &os, Multiplicadora &div)
+{
+    div.print(&os);
+    return os;
 }
 
 // Metodo que insere um valor no fim do vetor valoresObtidos

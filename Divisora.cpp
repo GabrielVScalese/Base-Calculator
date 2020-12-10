@@ -3,6 +3,7 @@
 #include "Multiplicadora.h"
 #include "Subtradora.h"
 #include "Validadora.h"
+#include <iostream>
 #include <string>
 
 /* Arquivo de implementacao da classe Divisora */
@@ -54,30 +55,35 @@ void Divisora::setNumCasasDecimais(int numCasasDecimais)
 
 bool Divisora::operator== (Divisora div)
 {
-    if (this->valor1 != div.valor1)
+    if (this->operator!=(div))
         return false;
-
-    if (this->valor2 != div.valor2)
-        return false;
-
-    if (this->base != div.base)
-        return false;
-
-    return true;
+    else
+        return true;
 }
 
 bool Divisora::operator!= (Divisora div)
 {
-    if (this->valor1 == div.valor1)
-        return false;
+    if (this->valor1 != div.valor1)
+        return true;
 
-    if (this->valor2 == div.valor2)
-        return false;
+    if (this->valor2 != div.valor2)
+        return true;
 
-    if (this->base == div.base)
-        return false;
+    if (this->base != div.base)
+        return true;
 
-    return true;
+    return false;
+}
+
+void Divisora::print(ostream *os)
+{
+    *os << "Valor1: "  << valor1 << " | Valor2: " << valor2 << " | Base: " << base;
+}
+
+ostream &operator<< (ostream &os, Divisora &div)
+{
+    div.print(&os);
+    return os;
 }
 
 // Metodo que prepara os valores para comecar a divisao

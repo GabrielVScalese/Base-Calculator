@@ -19,7 +19,12 @@ public:
     void setValor1 (string);
     void setValor2 (string);
     void setBase (int);
+    bool operator!= (Multiplicadora);
+    bool operator== (Multiplicadora);
+    void print(ostream *os);
     string multiplicarValores();
 };
+
+ostream &operator<< (ostream &os, Multiplicadora &d);
 
 #endif

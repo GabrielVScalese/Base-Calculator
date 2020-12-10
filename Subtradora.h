@@ -19,7 +19,12 @@ public:
     void setValor1 (string);
     void setValor2 (string);
     void setBase (int);
+    bool operator!= (Subtradora);
+    bool operator== (Subtradora);
+    void print(ostream *os);
     string subtrairValores();
 };
+
+ostream &operator<< (ostream &os, Subtradora &d);
 
 #endif

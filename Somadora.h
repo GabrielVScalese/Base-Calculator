@@ -18,7 +18,12 @@ public:
     void setValor1 (string);
     void setValor2 (string);
     void setBase (int);
+    bool operator!= (Somadora);
+    bool operator== (Somadora);
+    void print(ostream *os);
     string somarValores();
 };
+
+ostream &operator<< (ostream &os, Somadora &d);
 
 #endif

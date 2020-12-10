@@ -43,6 +43,39 @@ void Subtradora::setBase(int base)
     Subtradora::base = base;
 }
 
+bool Subtradora::operator== (Subtradora sub)
+{
+    if (this->operator!=(sub))
+        return false;
+    else
+        return true;
+}
+
+bool Subtradora::operator!= (Subtradora sub)
+{
+    if (this->valor1 != sub.valor1)
+        return true;
+
+    if (this->valor2 != sub.valor2)
+        return true;
+
+    if (this->base != sub.base)
+        return true;
+
+    return false;
+}
+
+void Subtradora::print(ostream *os)
+{
+    *os << "Valor1: "  << valor1 << " | Valor2: " << valor2 << " | Base: " << base;
+}
+
+ostream &operator<< (ostream &os, Subtradora &div)
+{
+    div.print(&os);
+    return os;
+}
+
 // Metodo que realiza emprestimo para um determinado digito
 int Subtradora::emprestarUm (int valor1) // Tem falha
 {

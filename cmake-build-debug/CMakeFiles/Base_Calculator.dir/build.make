@@ -76,22 +76,9 @@ include CMakeFiles/Base_Calculator.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Base_Calculator.dir/flags.make
 
-CMakeFiles/Base_Calculator.dir/main.cpp.obj: CMakeFiles/Base_Calculator.dir/flags.make
-CMakeFiles/Base_Calculator.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Base_Calculator.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Base_Calculator.dir\main.cpp.obj -c "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\main.cpp"
-
-CMakeFiles/Base_Calculator.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Base_Calculator.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\main.cpp" > CMakeFiles\Base_Calculator.dir\main.cpp.i
-
-CMakeFiles/Base_Calculator.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Base_Calculator.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\main.cpp" -o CMakeFiles\Base_Calculator.dir\main.cpp.s
-
 CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj: CMakeFiles/Base_Calculator.dir/flags.make
 CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj: ../Somadora.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Base_Calculator.dir\Somadora.cpp.obj -c "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\Somadora.cpp"
 
 CMakeFiles/Base_Calculator.dir/Somadora.cpp.i: cmake_force
@@ -104,7 +91,7 @@ CMakeFiles/Base_Calculator.dir/Somadora.cpp.s: cmake_force
 
 CMakeFiles/Base_Calculator.dir/Conversor.cpp.obj: CMakeFiles/Base_Calculator.dir/flags.make
 CMakeFiles/Base_Calculator.dir/Conversor.cpp.obj: ../Conversor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Base_Calculator.dir/Conversor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Base_Calculator.dir/Conversor.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Base_Calculator.dir\Conversor.cpp.obj -c "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\Conversor.cpp"
 
 CMakeFiles/Base_Calculator.dir/Conversor.cpp.i: cmake_force
@@ -117,7 +104,7 @@ CMakeFiles/Base_Calculator.dir/Conversor.cpp.s: cmake_force
 
 CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj: CMakeFiles/Base_Calculator.dir/flags.make
 CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj: ../Subtradora.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Base_Calculator.dir\Subtradora.cpp.obj -c "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\Subtradora.cpp"
 
 CMakeFiles/Base_Calculator.dir/Subtradora.cpp.i: cmake_force
@@ -130,7 +117,7 @@ CMakeFiles/Base_Calculator.dir/Subtradora.cpp.s: cmake_force
 
 CMakeFiles/Base_Calculator.dir/Auxiliadora.cpp.obj: CMakeFiles/Base_Calculator.dir/flags.make
 CMakeFiles/Base_Calculator.dir/Auxiliadora.cpp.obj: ../Auxiliadora.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Base_Calculator.dir/Auxiliadora.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Base_Calculator.dir/Auxiliadora.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Base_Calculator.dir\Auxiliadora.cpp.obj -c "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\Auxiliadora.cpp"
 
 CMakeFiles/Base_Calculator.dir/Auxiliadora.cpp.i: cmake_force
@@ -143,7 +130,7 @@ CMakeFiles/Base_Calculator.dir/Auxiliadora.cpp.s: cmake_force
 
 CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj: CMakeFiles/Base_Calculator.dir/flags.make
 CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj: ../Multiplicadora.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Base_Calculator.dir\Multiplicadora.cpp.obj -c "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\Multiplicadora.cpp"
 
 CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.i: cmake_force
@@ -156,7 +143,7 @@ CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.s: cmake_force
 
 CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj: CMakeFiles/Base_Calculator.dir/flags.make
 CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj: ../Divisora.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Base_Calculator.dir\Divisora.cpp.obj -c "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\Divisora.cpp"
 
 CMakeFiles/Base_Calculator.dir/Divisora.cpp.i: cmake_force
@@ -169,7 +156,7 @@ CMakeFiles/Base_Calculator.dir/Divisora.cpp.s: cmake_force
 
 CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj: CMakeFiles/Base_Calculator.dir/flags.make
 CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj: ../Validadora.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Base_Calculator.dir\Validadora.cpp.obj -c "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\Validadora.cpp"
 
 CMakeFiles/Base_Calculator.dir/Validadora.cpp.i: cmake_force
@@ -180,21 +167,33 @@ CMakeFiles/Base_Calculator.dir/Validadora.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Base_Calculator.dir/Validadora.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\Validadora.cpp" -o CMakeFiles\Base_Calculator.dir\Validadora.cpp.s
 
+CMakeFiles/Base_Calculator.dir/testes.cpp.obj: CMakeFiles/Base_Calculator.dir/flags.make
+CMakeFiles/Base_Calculator.dir/testes.cpp.obj: ../testes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Base_Calculator.dir/testes.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Base_Calculator.dir\testes.cpp.obj -c "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\testes.cpp"
+
+CMakeFiles/Base_Calculator.dir/testes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Base_Calculator.dir/testes.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\testes.cpp" > CMakeFiles\Base_Calculator.dir\testes.cpp.i
+
+CMakeFiles/Base_Calculator.dir/testes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Base_Calculator.dir/testes.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\COTUCA\2020\ENSINO TECNICO\SEGUNDO SEMESTRE\TOPICOS EM PROGRAMACAO ORIENTADA A OBJETOS\PROJETOS\PROJETO II\Base-Calculator\testes.cpp" -o CMakeFiles\Base_Calculator.dir\testes.cpp.s
+
 # Object files for target Base_Calculator
 Base_Calculator_OBJECTS = \
-"CMakeFiles/Base_Calculator.dir/main.cpp.obj" \
 "CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj" \
 "CMakeFiles/Base_Calculator.dir/Conversor.cpp.obj" \
 "CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj" \
 "CMakeFiles/Base_Calculator.dir/Auxiliadora.cpp.obj" \
 "CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj" \
 "CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj" \
-"CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj"
+"CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj" \
+"CMakeFiles/Base_Calculator.dir/testes.cpp.obj"
 
 # External object files for target Base_Calculator
 Base_Calculator_EXTERNAL_OBJECTS =
 
-Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/main.cpp.obj
 Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/Somadora.cpp.obj
 Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/Conversor.cpp.obj
 Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/Subtradora.cpp.obj
@@ -202,6 +201,7 @@ Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/Auxiliadora.cpp.obj
 Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/Multiplicadora.cpp.obj
 Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/Divisora.cpp.obj
 Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/Validadora.cpp.obj
+Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/testes.cpp.obj
 Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/build.make
 Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/linklibs.rsp
 Base_Calculator.exe: CMakeFiles/Base_Calculator.dir/objects1.rsp

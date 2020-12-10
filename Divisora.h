@@ -23,7 +23,10 @@ public:
     void setNumCasasDecimais (int);
     bool operator!= (Divisora);
     bool operator== (Divisora);
+    void print(ostream *os);
     string dividirValores();
 };
+
+ostream &operator<< (ostream &os, Divisora &d);
 
 #endif

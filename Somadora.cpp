@@ -40,6 +40,39 @@ void Somadora::setBase(int base)
     Somadora::base = base;
 }
 
+bool Somadora::operator== (Somadora som)
+{
+    if (this->operator!=(som))
+        return false;
+    else
+        return true;
+}
+
+bool Somadora::operator!= (Somadora som)
+{
+    if (this->valor1 != som.valor1)
+        return true;
+
+    if (this->valor2 != som.valor2)
+        return true;
+
+    if (this->base != som.base)
+        return true;
+
+    return false;
+}
+
+void Somadora::print(ostream *os)
+{
+    *os << "Valor1: "  << valor1 << " | Valor2: " << valor2 << " | Base: " << base;
+}
+
+ostream &operator<< (ostream &os, Somadora &div)
+{
+    div.print(&os);
+    return os;
+}
+
 // Metodo que soma dos digitos
 string Somadora::somarDoisDigitos (string digito1, string digito2, string passaUm, int base) {
     int adicional = 0;
