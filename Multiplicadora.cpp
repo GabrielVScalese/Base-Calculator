@@ -95,19 +95,14 @@ void inserirNoFim (string valor)
 
 // Metodo que realiza uma multiplicacao entre dois digitos
 string Multiplicadora::multiplicarDoisDigitos(string digito1, string digito2, string passaUm) {
-    int adicional = 1;
-
     int valor1 = Auxiliadora::converterDigitoEmInteiro(digito1);
     int valor2 = Auxiliadora::converterDigitoEmInteiro(digito2);
+    int adicional = 0;
 
     if (!passaUm.empty()) // Existe um "passaUm"
-    {
         adicional = Auxiliadora::converterDigitoEmInteiro(passaUm);
-        int produtoInicial = valor1 * valor2;
-        return Conversor::dezParaOutra(produtoInicial + adicional, base);
-    }
 
-    return Conversor::dezParaOutra(valor1 * valor2 * adicional, base);
+    return Conversor::dezParaOutra((valor1 * valor2) + adicional, base);
 }
 
 // Metodo que soma os valores obtidos durante a multiplicacao
