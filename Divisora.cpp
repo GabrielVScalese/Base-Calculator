@@ -18,7 +18,7 @@ Divisora::Divisora(string valor1, string valor2, int base, int numCasasDecimais)
     setValor1(valor1);
     setValor2(valor2);
     setBase(base);
-    setNumCasasDecimais(numCasasDecimais); // Arrumar na main
+    setNumCasasDecimais(numCasasDecimais);
 }
 
 // Metodo setter do atributo valor1
