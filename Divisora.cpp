@@ -21,6 +21,7 @@ Divisora::Divisora(string valor1, string valor2, int base, int numCasasDecimais)
     setNumCasasDecimais(numCasasDecimais); // Arrumar na main
 }
 
+// Metodo setter do atributo valor1
 void Divisora::setValor1(string valor1)
 {
     if (valor1.empty())
@@ -29,6 +30,7 @@ void Divisora::setValor1(string valor1)
     Divisora::valor1 = valor1;
 }
 
+// Metodo setter do atributo valor2
 void Divisora::setValor2(string valor2)
 {
     if (valor2.empty())
@@ -37,6 +39,7 @@ void Divisora::setValor2(string valor2)
     Divisora::valor2 = valor2;
 }
 
+// Metodo setter do atributo base
 void Divisora::setBase(int base)
 {
     if (!Validadora::existsBase(base))
@@ -45,6 +48,7 @@ void Divisora::setBase(int base)
     Divisora::base = base;
 }
 
+// Metodo setter do atributo numCasasDecimais
 void Divisora::setNumCasasDecimais(int numCasasDecimais)
 {
     if (numCasasDecimais <= 0)
@@ -53,6 +57,7 @@ void Divisora::setNumCasasDecimais(int numCasasDecimais)
     Divisora::numCasasDecimais = numCasasDecimais;
 }
 
+// Metodo de comparacao (igual) entre dois objetos do tipo Divisora
 bool Divisora::operator== (Divisora div)
 {
     if (this->operator!=(div))
@@ -61,6 +66,7 @@ bool Divisora::operator== (Divisora div)
         return true;
 }
 
+// Metodo de comparacao (diferente) entre dois objetos do tipo Divisora
 bool Divisora::operator!= (Divisora div)
 {
     if (this->valor1 != div.valor1)
@@ -75,11 +81,13 @@ bool Divisora::operator!= (Divisora div)
     return false;
 }
 
+// Metodo que printa os atributos do objeto
 void Divisora::print(ostream *os)
 {
     *os << "Valor1: "  << valor1 << " | Valor2: " << valor2 << " | Base: " << base;
 }
 
+// Metodo que permite o uso do metodo print da classe
 ostream &operator<< (ostream &os, Divisora &div)
 {
     div.print(&os);
@@ -112,8 +120,8 @@ string Divisora::obterQuociente (string dividendo, string divisor){
     // Testa todos os produtos possiveis na base fornecida
     for (int i = 0; i < base; i++){
         Multiplicadora mul (divisor, string(1, digitosPossiveis.at(i)), base);
-        string produto = Auxiliadora::removerZeros(mul.multiplicarValores());
-        dividendo = Auxiliadora::removerZeros(dividendo);
+        string produto = Auxiliadora::removerZerosAntesVirgula(mul.multiplicarValores());
+        dividendo = Auxiliadora::removerZerosAntesVirgula(dividendo);
 
         if (Auxiliadora::apenasZeros(produto))
             continue;

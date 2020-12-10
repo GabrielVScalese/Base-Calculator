@@ -83,7 +83,7 @@ int Auxiliadora::getQtdInteiros (string valor)
    return valor.length() - getQtdDecimais(valor) - 1;
 }
 
-// Metodo que complementa os valores se for necessario
+// Metodo que complementa os valores (parte inteira e/ou parte decimal com zeros) se for necessario
 void Auxiliadora::prepararValores (string *valor1, string *valor2)
 {
     if (getQtdInteiros(*valor1) > getQtdInteiros(*valor2))
@@ -186,7 +186,7 @@ int Auxiliadora::apenasZeros (string valor)
 }
 
 // Metodo que remove zeros a esquerda da virgula
-string Auxiliadora::removerZeros (string valor) {
+string Auxiliadora::removerZerosAntesVirgula (string valor) {
     if (apenasZeros(valor))
         return valor;
 

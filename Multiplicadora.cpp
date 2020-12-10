@@ -6,7 +6,7 @@
 #include "Validadora.h"
 #include <iostream>
 
-/* Implementacao da classe Multiplicadora */
+/* Arquivo de implementacao da classe Multiplicadora */
 
 using namespace std;
 
@@ -23,6 +23,7 @@ Multiplicadora::Multiplicadora(string valor1, string valor2, int base)
     setBase(base);
 }
 
+// Metodo setter do atributo valor1
 void Multiplicadora::setValor1(string valor1)
 {
     if (valor1.empty())
@@ -31,6 +32,7 @@ void Multiplicadora::setValor1(string valor1)
     Multiplicadora::valor1 = valor1;
 }
 
+// Metodo setter do atributo valor2
 void Multiplicadora::setValor2(string valor2)
 {
     if (valor2.empty())
@@ -39,6 +41,7 @@ void Multiplicadora::setValor2(string valor2)
     Multiplicadora::valor2 = valor2;
 }
 
+// Metodo setter do atributo base
 void Multiplicadora::setBase(int base)
 {
     if (!Validadora::existsBase(base))
@@ -47,6 +50,7 @@ void Multiplicadora::setBase(int base)
     Multiplicadora::base = base;
 }
 
+// Metodo de comparacao (igual) entre dois objetos do tipo Multiplicadora
 bool Multiplicadora::operator== (Multiplicadora mul)
 {
     if (this->operator!=(mul))
@@ -55,6 +59,7 @@ bool Multiplicadora::operator== (Multiplicadora mul)
         return true;
 }
 
+// Metodo de comparacao (diferente) entre dois objetos do tipo Multiplicadora
 bool Multiplicadora::operator!= (Multiplicadora mul)
 {
     if (this->valor1 != mul.valor1)
@@ -69,11 +74,13 @@ bool Multiplicadora::operator!= (Multiplicadora mul)
     return false;
 }
 
+// Metodo que printa os atributos do objeto
 void Multiplicadora::print(ostream *os)
 {
     *os << "Valor1: "  << valor1 << " | Valor2: " << valor2 << " | Base: " << base;
 }
 
+// Metodo que permite o uso do metodo print da classe
 ostream &operator<< (ostream &os, Multiplicadora &div)
 {
     div.print(&os);
@@ -116,7 +123,7 @@ string Multiplicadora::somarValoresObtidos()
         ret = som.somarValores();
     }
 
-    ret = Auxiliadora::removerZeros(Auxiliadora::inserirVirgula(ret, ret.length() -
+    ret = Auxiliadora::removerZerosAntesVirgula(Auxiliadora::inserirVirgula(ret, ret.length() -
     (Auxiliadora::getQtdDecimais(valor1) * 2))); // Retira impurezas do produto final
 
     return ret;

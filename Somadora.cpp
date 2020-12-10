@@ -16,6 +16,7 @@ Somadora::Somadora(string valor1, string valor2, int base) {
     setBase(base);
 }
 
+// Metodo setter do atributo valor1
 void Somadora::setValor1(string valor1)
 {
     if (valor1.empty())
@@ -24,6 +25,7 @@ void Somadora::setValor1(string valor1)
     Somadora::valor1 = valor1;
 }
 
+// Metodo setter do atributo valor2
 void Somadora::setValor2(string valor2)
 {
     if (valor2.empty())
@@ -32,6 +34,7 @@ void Somadora::setValor2(string valor2)
     Somadora::valor2 = valor2;
 }
 
+// Metodo setter do atributo base
 void Somadora::setBase(int base)
 {
     if (!Validadora::existsBase(base))
@@ -40,6 +43,7 @@ void Somadora::setBase(int base)
     Somadora::base = base;
 }
 
+// Metodo de comparacao (igual) entre dois objetos do tipo Somadora
 bool Somadora::operator== (Somadora som)
 {
     if (this->operator!=(som))
@@ -48,6 +52,7 @@ bool Somadora::operator== (Somadora som)
         return true;
 }
 
+// Metodo de comparacao (diferente) entre dois objetos do tipo Somadora
 bool Somadora::operator!= (Somadora som)
 {
     if (this->valor1 != som.valor1)
@@ -62,18 +67,20 @@ bool Somadora::operator!= (Somadora som)
     return false;
 }
 
+// Metodo que printa os atributos do objeto
 void Somadora::print(ostream *os)
 {
     *os << "Valor1: "  << valor1 << " | Valor2: " << valor2 << " | Base: " << base;
 }
 
+// Metodo que permite o uso do metodo print da classe
 ostream &operator<< (ostream &os, Somadora &div)
 {
     div.print(&os);
     return os;
 }
 
-// Metodo que soma dos digitos
+// Metodo que soma dois digitos
 string Somadora::somarDoisDigitos (string digito1, string digito2, string passaUm, int base) {
     int adicional = 0;
 
@@ -123,7 +130,7 @@ string Somadora::somarValores() {
         }
     }
 
-    return Auxiliadora::removerZeros(ret);
+    return Auxiliadora::removerZerosAntesVirgula(ret);
 }
 
 

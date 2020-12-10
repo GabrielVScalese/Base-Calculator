@@ -19,6 +19,7 @@ Subtradora::Subtradora(string valor1, string valor2, int base)
     setBase(base);
 }
 
+// Metodo setter do atributo valor1
 void Subtradora::setValor1(string valor1)
 {
     if (valor1.empty())
@@ -27,6 +28,7 @@ void Subtradora::setValor1(string valor1)
     Subtradora::valor1 = valor1;
 }
 
+// Metodo setter do atributo valor2
 void Subtradora::setValor2(string valor2)
 {
     if (valor2.empty())
@@ -35,6 +37,7 @@ void Subtradora::setValor2(string valor2)
     Subtradora::valor2 = valor2;
 }
 
+// Metodo setter do atributo base
 void Subtradora::setBase(int base)
 {
     if (!Validadora::existsBase(base))
@@ -43,6 +46,7 @@ void Subtradora::setBase(int base)
     Subtradora::base = base;
 }
 
+// Metodo de comparacao (igual) entre dois objetos do tipo Subtradora
 bool Subtradora::operator== (Subtradora sub)
 {
     if (this->operator!=(sub))
@@ -51,6 +55,7 @@ bool Subtradora::operator== (Subtradora sub)
         return true;
 }
 
+// Metodo de comparacao (diferente) entre dois objetos do tipo Subtradora
 bool Subtradora::operator!= (Subtradora sub)
 {
     if (this->valor1 != sub.valor1)
@@ -65,18 +70,20 @@ bool Subtradora::operator!= (Subtradora sub)
     return false;
 }
 
+// Metodo que printa os atributos do objeto
 void Subtradora::print(ostream *os)
 {
     *os << "Valor1: "  << valor1 << " | Valor2: " << valor2 << " | Base: " << base;
 }
 
+// Metodo que permite o uso do metodo print da classe
 ostream &operator<< (ostream &os, Subtradora &div)
 {
     div.print(&os);
     return os;
 }
 
-// Metodo que realiza emprestimo para um determinado digito
+// Metodo que realiza um emprestimo para um determinado digito
 int Subtradora::emprestarUm (int valor1) // Tem falha
 {
     int copyIndiceAtual = indiceAtual;
@@ -125,7 +132,7 @@ int Subtradora::emprestarUm (int valor1) // Tem falha
     return Conversor::outraParaDez(std::to_string(valor1 + 10), base);
 }
 
-// Metodo que subtrai dos digitos
+// Metodo que subtrai dois digitos
 string Subtradora::subtrairDoisDigitos (string digito1, string digito2) {
     int valor1 = Auxiliadora::converterDigitoEmInteiro(digito1);
     int valor2 = Auxiliadora::converterDigitoEmInteiro(digito2);
@@ -157,5 +164,5 @@ string Subtradora::subtrairValores () {
         ret.insert(0, subtrairDoisDigitos(string(1, maiorValor[i]), string(1, menorValor[i])));
     }
 
-    return Auxiliadora::removerZeros(ret); // Retira impurezas e retorna o resultado
+    return Auxiliadora::removerZerosAntesVirgula(ret); // Retira impurezas e retorna o resultado
 }

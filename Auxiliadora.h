@@ -22,7 +22,7 @@ public:
     static int getQtdDecimais (string);
     static string completarParteDecimal (string, int);
     static string removerCaracter (char, string);
-    static string removerZeros (string);
+    static string removerZerosAntesVirgula (string);
     static int apenasZeros (string);
     static string removerCasasDecimais (string, int);
 };
