@@ -3,8 +3,8 @@
 #include "Multiplicadora.h"
 #include "Somadora.h"
 #include "Subtradora.h"
-#include "Auxiliadora.h"
 
+// Main para testes
 int main ()
 {
     cout << "==== [ Programa de testes ] ==== ";
