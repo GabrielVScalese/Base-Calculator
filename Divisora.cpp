@@ -120,7 +120,8 @@ string Divisora::obterQuociente (string dividendo, string divisor)
         return "0";
 
     // Testa todos os produtos possiveis na base fornecida
-    for (int i = 0; i < base; i++){
+    for (int i = 0; i < base; i++)
+    {
         Multiplicadora mul (divisor, string(1, digitosPossiveis.at(i)), base);
         string produto = Auxiliadora::removerZerosAntesVirgula(mul.multiplicarValores());
         dividendo = Auxiliadora::removerZerosAntesVirgula(dividendo);

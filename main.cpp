@@ -69,7 +69,8 @@ int main() {
     valor2BaseDez = Conversor::outraParaDez(valor2, base);
 
     string result;
-    switch (*operacao.c_str()) {
+    switch (*operacao.c_str())
+    {
         case '+' :
         {
             if(valor1BaseDez + valor2BaseDez < 0)

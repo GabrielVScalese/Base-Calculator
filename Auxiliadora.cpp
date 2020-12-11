@@ -7,15 +7,11 @@
 int Auxiliadora::getValorEmInteiro (string digito)
 {
     string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string alfabeto2 = "abcdefghijklmnopqrstuvwxyz";
 
-    if (alfabeto.find(digito) == -1)
-        if (alfabeto2.find(digito) == -1)
-            return -1;
-        else
-            return alfabeto2.find(digito) + 10;
+    if (!isalpha(*digito.c_str()))
+        return -1;
 
-    return alfabeto.find(digito) + 10;
+    return alfabeto.find(toupper(*digito.c_str())) + 10;
 }
 
 // Metodo que retorna o valor (string) equivalente de um inteiro
@@ -31,7 +27,7 @@ int Auxiliadora::converterDigitoEmInteiro(string digito)
 {
     int ret;
 
-    if (getValorEmInteiro(digito) != -1)
+    if (isalpha(*digito.c_str()))
         ret = Auxiliadora::getValorEmInteiro(digito);
     else
     {
@@ -177,11 +173,11 @@ string Auxiliadora::removerCaracter(char carac, string valor)
 // Metodo boolean que verifica se o valor tem apenas zeros
 int Auxiliadora::apenasZeros (string valor)
 {
-    for (char i : valor)
-        if (i == ',')
+    for (char c : valor)
+        if (c == ',')
             continue;
         else
-            if (i != '0')
+            if (c != '0')
                 return 0;
 
     return 1;

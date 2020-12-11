@@ -3,6 +3,7 @@
 #include "Multiplicadora.h"
 #include "Somadora.h"
 #include "Subtradora.h"
+#include "Auxiliadora.h"
 
 int main ()
 {
