@@ -65,7 +65,7 @@ int main() {
     long double valor1BaseDez;
     long double valor2BaseDez;
 
-    valor1BaseDez = Conversor::outraParaDez(valor1, base); // Arrumar sinal
+    valor1BaseDez = Conversor::outraParaDez(valor1, base);
     valor2BaseDez = Conversor::outraParaDez(valor2, base);
 
     string result;

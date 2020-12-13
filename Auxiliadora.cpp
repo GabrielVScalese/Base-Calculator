@@ -74,7 +74,7 @@ int Auxiliadora::getQtdDecimais (string valor)
     return ret;
 }
 
-// Metodo que retorna a quantidade de valores a direita da virgula
+// Metodo que retorna a quantidade de valores a esquerda da virgula
 int Auxiliadora::getQtdInteiros (string valor)
 {
    return valor.length() - getQtdDecimais(valor) - 1;
